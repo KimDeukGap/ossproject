@@ -6,6 +6,7 @@ let timeLeft = 7;
 let countdown;
 let score = 0; // 점수 저장
 
+
 // 이미지와 정답 매칭 배열
 const questions = [
     // 콘솔게임
@@ -14,7 +15,7 @@ const questions = [
     { img: "https://i.namu.wiki/i/n9cJkqc7f6-70zrZfGX6cpfPv5HWakQrqzWEgTfFRCfRo_iGaUzgGVnAlY0CRQ-eSZKdoe_foicfOCq9qUwg_w.webp", answer: "메트로이드" },
     { img: "https://i.namu.wiki/i/uKv91PAbQzefb1N38cjFPUCqqRJgKgRg10n8BtK2nHPrPtehbaLlt63dZw0eNfrih6ZXYC89eRz6f8gN79EgGA.webp", answer: ["스플래툰", "스플레툰"]},
     { img: "https://i.namu.wiki/i/wXGU6DZbHowc6IB0GYPJpcmdDkLO3TW3MHzjg63jcTJvIzaBKhYqR0l9toBMHTv2OSU4eFKfPOlfrSQpymDJlA.webp", answer: "별의커비"},
-    { img: "https://i.namu.wiki/i/KXeK4nhtmO69HJFBFhW42CeSZJCCHQ0Tsb8Wlcutdv03WQy1wbF0mgASU43f7b_uR_qtD_YmH3mxp0UxgUkjeQ.webp", answer: ["포켓몬", "포캣몬"]},
+    { img: "https://i.namu.wiki/i/KXeK4nhtmO69HJFBFhW42CeSZJCCHQ0Tsb8Wlcutdv03WQy1wbF0mgASU43f7b_uR_qtD_YmH3mxp0UxgUkjeQ.webp", answer: ["포켓몬", "포캣몬", "포켓몬스터", "포캣몬스터"]},
     { img: "https://sm.ign.com/ign_kr/gallery/s/smash-bros/smash-bros-switch-every-fighter-revealed_5euv.jpg", answer: ["스매시브라더스","스메시브라더스"] },
     { img: "https://blog.kakaocdn.net/dn/m3POB/btsKLvUBFLv/8SBNHhKbzkMNTvygRBief0/img.png", answer: "피그민" },
     { img: "https://i.namu.wiki/i/oU0avPQmlPv0p13BPnuEqyzmtGl9SoTArdKVYpb1r5CYXrpUjEqtiurvlFDjpXdOMyDXwIFYpz0x3PgtS92_8A.webp", answer: "동물의숲"},
@@ -37,8 +38,8 @@ const questions = [
     { img: "https://i.namu.wiki/i/vNQW1biNNsq6NbMIHv9Y3OmFvTxmUrWuRS6cmbblOrXZEFNGIp11NTPDZaVPL_fWu0-Is-qz3C6GEgse19HI-A.webp", answer: ["로스트아크","로아"] },
     { img: "https://media.bunjang.co.kr/product/86357598_1_1530373942_w360.jpg", answer: ["피파","피파온라인"] },
     { img: "https://images.ctfassets.net/h1rqp7q66d54/3yVDlCOrJnXMrb0yS4ea0y/d93ed97030eb7c233384e5a551aeaea7/GTAV_Gen9_MFT_Webstore_Hero_3840x2160_DELIV_opt__1_.jpg", answer: ["GTA","GTA5", "GTA3", "그타", "지티에이"] },
-    { img: "https://www.videogameschronicle.com/files/2022/02/sds5.jpg", answer: "엘든링"},
-    { img: "https://sm.ign.com/t/ign_kr/cover/m/minecraft/minecraft_9hhx.600.jpg", answer: "마인크래프트"},
+    { img: "https://www.videogameschronicle.com/files/2022/02/sds5.jpg", answer: ["엘든링","앨든링"] },
+    { img: "https://sm.ign.com/t/ign_kr/cover/m/minecraft/minecraft_9hhx.600.jpg", answer: ["마인크래프트","마크"]},
     { img: "img/img29.jpg", answer: "스타크래프트"}, //img 폴더에 넣어놨음 따로 설정 X
     { img: "img/img30.jpg", answer: "팰월드"}, //img 폴더에 넣어놨음 따로 설정 X
     { img: "https://i.namu.wiki/i/HLF818BA17ND4jqwDeTUNQUF1SqBkwARlW5K8U_jo6P031Jrh7QsT1TNocYCqwmpLP8tOWtrOEOuVtIDqNEFWQ.webp", answer: ["오버워치","옵치"] },
@@ -57,7 +58,7 @@ const questions = [
     { img: "https://wimg.heraldcorp.com/content/default/2013/02/27/20130227000676_0.jpg", answer: "바운스볼"},
     { img: "https://i.namu.wiki/i/stFRaj4yc5qgNHLfG-RJAhJU2HvXQOehs0L1kBbNvtY6wT78U0ShoipHLGy25P78F95bV8oOR0zZuZHKZ2LMBg.webp", answer: ["템플런","탬플런"] },
     { img: "https://db.kookje.co.kr/news2000/photo/2023/0222/20230222.99099006692i2.jpg", answer: "서브웨이서퍼"},
-    { img: "https://upload3.inven.co.kr/upload/2025/11/15/bbs/i1825978851.png", answer: "앵그리버드"},
+    { img: "https://i.namu.wiki/i/_Z_rXNxtk8cG6D1KsBD02t6GRiCMoLYToSXXDDlEDhuKd5MzJshkYDzr5KUzzw2P3SxACR6u2qeAw6x3J17Faw.webp", answer: "앵그리버드"},
     { img: "https://cdn.gamey.kr/news/photo/201601/1624427_68495_1403.jpg", answer: "포우"},
     { img: "https://mblogthumb-phinf.pstatic.net/MjAyMDAyMjFfMTIz/MDAxNTgyMjU4NzEwNTkz.It31_swi3kDrQiaYbeTRdSk4VvPSZK1TK1-VrylJlqQg.p6lYLLJud7pMl2ar2e2Etew0LLfao5ryKg0WARLEtzsg.JPEG.dpeb011/20200221_130014.jpg?type=w800", answer: ["슈퍼팽귄","슈퍼펭귄"] },
     { img: "https://i.namu.wiki/i/HiWaTw5E7oL7Pi__fHTZW4nVYmrMPLcQIUImJ73oiYHRmDJrX9Is43D3r5PqDZvQqCBuhVN7xT2ipKEJspCE6g.webp", answer: "마피아42" },
@@ -68,6 +69,12 @@ const questions = [
 
 
 
+// 진행바 업데이트 (maxRound 0 방지)
+function updateProgress() {
+    const progress = maxRound ? (currentRound / maxRound) * 100 : 0;
+    const bar = document.getElementById("progress-bar");
+    if (bar) bar.style.width = progress + "%";
+}
 
 function startGame(count) {
     totalRounds = count;
@@ -76,6 +83,7 @@ function startGame(count) {
     score = 0;
 
     document.getElementById("round-info").textContent = "라운드: " + currentRound + "/" + totalRounds;
+    document.getElementById("current-score").textContent = score;
     availableQuestions = shuffle(questions).slice(0, maxRound);
 
     document.getElementById("setup").style.display = "none";
@@ -83,6 +91,7 @@ function startGame(count) {
 
     loadQuestion();
     startTimer();
+    updateProgress(); // 첫 라운드 시작 시 진행바 표시
 }
 
 function startTimer() {
@@ -90,35 +99,37 @@ function startTimer() {
     if (countdown) clearInterval(countdown);
 
     timeLeft = 7;
-    timerElement.textContent = `남은 시간: ${timeLeft}초`;
-    timerElement.style.color = "black";
-    timerElement.style.fontWeight = "normal";
+    if (timerElement) {
+        timerElement.textContent = `남은 시간: ${timeLeft}초`;
+        timerElement.style.color = "black";
+        timerElement.style.fontWeight = "normal";
+    }
 
     countdown = setInterval(() => {
         timeLeft--;
-        timerElement.textContent = `남은 시간: ${timeLeft}초`;
+        if (timerElement) timerElement.textContent = `남은 시간: ${timeLeft}초`;
 
-        if (timeLeft < 4) {
+        if (timeLeft < 4 && timerElement) {
             timerElement.style.color = "red";
             timerElement.style.fontWeight = "bold";
         }
 
         if (timeLeft <= 0) {
-            clearInterval(countdown);
+            if (countdown) clearInterval(countdown);
             nextRound();
         }
     }, 1000);
 }
 
 function nextRound() {
-    const roundElement = document.querySelector('#room-info span');
-    const timerElement = document.getElementById('timer');
+    const roundElement = document.getElementById('round-info');
 
     if (currentRound < maxRound) {
         currentRound++;
-        roundElement.textContent = `라운드: ${currentRound}/${maxRound}`;
+        if (roundElement) roundElement.textContent = `라운드: ${currentRound}/${maxRound}`;
         loadQuestion();
         startTimer();
+        updateProgress();
     } else {
         endGame();
     }
@@ -127,10 +138,19 @@ function nextRound() {
 function loadQuestion() {
     const questionArea = document.getElementById("question-area");
     const currentQuestion = availableQuestions[currentRound - 1];
+
+    if (!questionArea) return;
+
+    if (!currentQuestion) {
+        questionArea.innerHTML = `<p>문제를 불러올 수 없습니다.</p>`;
+        return;
+    }
+
     questionArea.innerHTML = `<img src="${currentQuestion.img}" alt="문제 이미지" style="max-width:100%; height:auto;">`;
 }
 
 function endGame() {
+    if (countdown) clearInterval(countdown);
     document.getElementById("game-display").style.display = "none";
     document.getElementById("result-display").style.display = "block";
 
@@ -139,7 +159,6 @@ function endGame() {
         맞춘 갯수: ${score}개
     `;
 }
-
 
 function shuffle(array) {
     let arr = [...array];
@@ -150,59 +169,69 @@ function shuffle(array) {
     return arr;
 }
 
-// 정답 제출 함수
+// 정답 제출 함수 (개선판)
 function submitAnswer() {
-    const userAnswer = document.getElementById("user-answer").value.trim();
+    const answerBtn = document.getElementById("send-btn");
+    const userInput = document.getElementById("user-answer");
     const feedbackElement = document.getElementById("feedback");
 
-    if (userAnswer === "") {
+    if (!userInput || !feedbackElement) return;
+
+    const userAnswerRaw = userInput.value.trim();
+    if (userAnswerRaw === "") {
         feedbackElement.textContent = "정답을 입력하세요!";
         feedbackElement.style.color = "orange";
         return;
     }
 
+    // 중복 제출 방지
+    if (answerBtn) answerBtn.disabled = true;
+
+    const userAnswer = userAnswerRaw.toLowerCase();
     const currentQuestion = availableQuestions[currentRound - 1];
 
-    // 여러 정답 중 하나라도 맞으면 정답 처리
-    if (currentQuestion.answer.includes(userAnswer)) {
+    if (!currentQuestion) {
+        feedbackElement.textContent = "문제가 없습니다.";
+        if (answerBtn) answerBtn.disabled = false;
+        return;
+    }
+
+    const answers = Array.isArray(currentQuestion.answer) ? currentQuestion.answer : [currentQuestion.answer];
+    const normalizedAnswers = answers.map(a => String(a).trim().toLowerCase());
+
+    // 정확 일치 비교 (원하면 includes로 부분일치 허용 가능)
+    const isCorrect = normalizedAnswers.some(a => a === userAnswer);
+
+    if (isCorrect) {
         score++;
         feedbackElement.textContent = "정답!";
         feedbackElement.style.color = "green";
+        const scoreEl = document.getElementById("current-score");
+        if (scoreEl) scoreEl.textContent = score;
     } else {
-        // answer가 배열일 수도 있으니 첫 번째 값을 대표로 사용
-    const correctName = Array.isArray(currentQuestion.answer) 
-        ? currentQuestion.answer[0] 
-        : currentQuestion.answer;
+        const correctName = answers[0];
+        feedbackElement.style.color = "black";
+        feedbackElement.innerHTML = `<span style="color:red;">오답!</span> - ${correctName}`;
+    }
 
-    // 부모 요소 색상 초기화
-    feedbackElement.style.color = "black";
-
-    // 오답!만 빨간색
-    feedbackElement.innerHTML = `<span style="color:red;">오답!</span> - ${correctName}`;
-}
-
-    document.getElementById("user-answer").value = "";
-    clearInterval(countdown);
+    userInput.value = "";
+    if (countdown) clearInterval(countdown);
 
     setTimeout(() => {
         feedbackElement.textContent = "";
+        if (answerBtn) answerBtn.disabled = false;
         nextRound();
     }, 1000);
 }
-
-
 
 document.addEventListener('DOMContentLoaded', () => {
     const answerButton = document.getElementById("send-btn");
     const answerInput = document.getElementById("user-answer");
 
-    // 버튼 클릭
-    answerButton.addEventListener("click", submitAnswer);
-
-    // 엔터 키 입력
-    answerInput.addEventListener("keydown", (event) => {
-        if (event.key === "Enter") {
-            submitAnswer();
-        }
-    });
+    if (answerButton) answerButton.addEventListener("click", submitAnswer);
+    if (answerInput) {
+        answerInput.addEventListener("keydown", (event) => {
+            if (event.key === "Enter") submitAnswer();
+        });
+    }
 });
