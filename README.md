@@ -27,6 +27,10 @@
 
 https://kimdeukgap.github.io/ossproject/ossproject/ 해당 주소로 접속 가능
 
+또는
+
+<img width="1000" height="1000" alt="QR" src="https://github.com/user-attachments/assets/0fad80ac-03aa-4462-ae0a-68fb77f45e5a" />
+
 ---
 
 ## 주요 기능
