@@ -29,7 +29,7 @@ https://kimdeukgap.github.io/ossproject/ossproject/ 해당 주소로 접속 가�
 
 또는
 
-<img width="200" height="200" alt="qrcode" src="https://github.com/user-attachments/assets/6b22d60c-5c9d-4e50-888a-99ad18e974b4" />
+<img width="300" height="300" alt="QR" src="https://github.com/user-attachments/assets/a0d61da9-1672-4243-a149-8bcac889ca7e" />
 
 ---
 
