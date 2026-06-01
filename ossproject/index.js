@@ -122,7 +122,7 @@ const questions = [
     { img: "https://i.namu.wiki/i/Aib1jbOAGB83rHNk-aZduRyBKPQEf2mxzrc04WT9mC8rgE6zADpJkUlipbmdfp0rSk7y2jGc6rc5FVcI-mcuJA.webp", answer: ["케로로팡팡","케팡"] },
     { img: "https://cdn.e2news.com/news/photo/201110/56809_18375_2949.jpg", answer: ["탭소닉","텝소닉","탭 소닉"] },
     { img: "https://mblogthumb-phinf.pstatic.net/MjAyMTA2MThfMTA5/MDAxNjI0MDExMDY0OTg1.i-QqpIxD9kUmwDBnSYHNn-a6s7wfy62YQgwgHfCOpwsg.fp-jdRgQqaF1LF2eFQssm1lj_64fdugn0i34uz8_mPkg.PNG.iyy1021/%EC%96%BC%EB%B6%88%EC%B6%A4_%EB%AC%B4%EB%A3%8C_%EB%A6%AC%EB%93%AC%EA%B2%8C%EC%9E%84_%EB%B6%88%EA%B3%BC_%EC%96%BC%EC%9D%8C%EC%9D%98_%EC%B6%A4_A_Dance_of_Fire_and_Ice_10.png?type=w800", answer: ["불과 얼음의 춤","불과얼음의춤","얼불춤"] },
-    { img: "https://upload2.inven.co.kr/upload/2020/01/10/bbs/i15601218695.jpg", answer: ["롤토체스","롤체"] },
+    { img: "https://attach.lolchess.gg/2020%2F12%2F02%2F1606847194747-Screenshot_20201130-205428_TFT.jpg", answer: ["롤토체스","롤체"] },
     { img: "https://cdn.gameple.co.kr/news/photo/201812/146128_151068_5835.jpg", answer: ["브롤스타즈","브롤"] },
     { img: "https://blog.kakaocdn.net/dna/45VzJ/btsrgQklNjN/AAAAAAAAAAAAAAAAAAAAAPpFeRauVn5LB4RcTBAzEE2lZHy-LySLbVmUx_z23BGy/img.png?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&expires=1780239599&allow_ip=&allow_referer=&signature=P8b49zf3K8Jn%2FnPYRoakoofC7t8%3D", answer: ["길건너친구들","길건너 친구들"] },
     { img: "https://i.ytimg.com/vi/yssfMxGtMt0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCoKzEAZrzM737FO9QFXTvk2ro-6g", answer: ["지오메트리 대시","지오매트리대쉬","지오매트리대시","지오메트리대쉬","지오메트리 대쉬"] },
