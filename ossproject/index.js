@@ -116,7 +116,7 @@ const questions = [
     { img: "https://i.ytimg.com/vi/11l0rPOrvP8/maxresdefault.jpg", answer: ["아빠와 나","아빠와나"] },
     { img: "https://i.ytimg.com/vi/OhVMG1tEKKA/maxresdefault.jpg", answer: ["후레쉬맨","후래쉬맨"] },
     { img: "img/img99.jpg", answer: ["테크모 월드컵 98","테크모 축구","테크모 월드컵","테크모","테크모축구","테크모월드컵","싱가"] },
-    { img: "https://blog.kakaocdn.net/dna/2Wd3U/btrJLTCGSHO/AAAAAAAAAAAAAAAAAAAAAB-tGePVmJc8SyNTbu-fRwurNAmN1hKXFlrSSdvAYP9L/img.png?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&expires=1780239599&allow_ip=&allow_referer=&signature=q%2FJNpEhaBGZp84VfpqcElMvCgAM%3D", answer: ["동물철권","동철"] },
+    { img: "https://upload3.inven.co.kr/upload/2021/05/14/bbs/i16501691003.jpg?MW=800", answer: ["동물철권","동철"] },
     // 100개
 
     { img: "https://i.namu.wiki/i/Aib1jbOAGB83rHNk-aZduRyBKPQEf2mxzrc04WT9mC8rgE6zADpJkUlipbmdfp0rSk7y2jGc6rc5FVcI-mcuJA.webp", answer: ["케로로팡팡","케팡"] },
